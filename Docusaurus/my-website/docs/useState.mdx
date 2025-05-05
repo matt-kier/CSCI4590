@@ -1,0 +1,23 @@
+# Exploring useState in React
+
+In React, the `useState()` hook lets you create and manage state inside a function component.
+
+When you call `const [count, setCount] = React.useState(0);`, you're:
+- Creating a piece of state called `count`
+- Starting it at `0`
+- Creating a function called `setCount` that updates the value of `count`
+
+Try editing the example below to better understand how it works:
+
+```jsx live
+function Counter() {
+  const [count, setCount] = React.useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times.</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+
